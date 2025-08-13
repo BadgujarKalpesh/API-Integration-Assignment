@@ -1,8 +1,7 @@
-import React from 'react';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Card, Container, Row, Col, Button, Modal } from 'react-bootstrap';
-import BuyNowForm from './BuyNowForm'; // Import the form component
+import BuyNowForm from './BuyNowForm'; 
 import './App.css';
 
 function App() {
@@ -23,7 +22,6 @@ function App() {
     fetchProducts();
   }, []);
 
-  // Handlers for the Modal
   const handleViewClick = (product) => {
     setSelectedProduct(product);
     setShowModal(true);
@@ -34,7 +32,6 @@ function App() {
     setSelectedProduct(null);
   };
 
-  // Handlers for the Buy Now Form
   const handleBuyNowClick = () => {
       setShowBuyForm(true);
   };
@@ -43,7 +40,6 @@ function App() {
       setShowBuyForm(false);
   };
 
-  // Main render logic
   if (showBuyForm) {
     return <BuyNowForm onBack={handleBackToProducts} />;
   }
@@ -72,7 +68,6 @@ function App() {
         </Row>
       </Container>
 
-      {/* Product Details Modal */}
       {selectedProduct && (
         <Modal show={showModal} onHide={handleCloseModal} size="lg">
           <Modal.Header closeButton>

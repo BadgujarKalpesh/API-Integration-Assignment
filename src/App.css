@@ -34,7 +34,7 @@
   transform: scale(1.05);
 }
 
-/* New style for the modal image */
+
 .modal-image {
     max-height: 400px;
     object-fit: contain;

@@ -1,11 +1,10 @@
-import React from 'react';
 import { Form, Button, Container, Row, Col } from 'react-bootstrap';
 
 function BuyNowForm({ onBack }) {
   const handleSubmit = (event) => {
     event.preventDefault();
     alert('Order submitted! (This is a demo)');
-    onBack(); // Go back to product list after submission
+    onBack(); 
   };
 
   return (
